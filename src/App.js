@@ -10,11 +10,12 @@ import Stat from './stat';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './home'
 
+
 function App() {
   
   return (
     <Router>
-      <div>
+      <div className="container" >
         < Nav />
         <Switch>
           <Route path="/" component={Home} exact={true} />

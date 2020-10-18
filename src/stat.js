@@ -26,8 +26,8 @@ function Stat() {
                       <h4> Base Url : {data.url} </h4>
                       <h6> Total Clicks : {data.total_click} </h6>
                       <h6> Short Url : {Url}{`/${data.short_url}`} </h6>
-                      <h6> {data.countries}</h6>
-                      <h6> {data.all_ips}</h6>
+                      <h6> Country Name : {data.countries.join(", ")}</h6>
+                      <h6> Ip Address : {data.all_ips.join(", ")}</h6>
                       <hr/>
                   </div>
               )
