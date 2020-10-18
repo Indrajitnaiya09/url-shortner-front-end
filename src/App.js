@@ -22,13 +22,18 @@ function App() {
   })
     .then((response) =>{
       setShortUrl(response.data.url.short_url)
-      console.log(response.data.url.short_url)
+      if (response.data.status == 422 ){
+        Swal.fire({
+          icon: 'error',
+          title: 'Please enter valid URL',
+          text: 'Invalid URL',
+      })
+      }
     })
     .catch((err) =>{
       Swal("Please enter correct url", "", "error")
     })
   }
-  console.log(data);
   return (
     <div>
       <h1> Welcome to my shortner project. </h1>
